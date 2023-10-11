@@ -1,9 +1,9 @@
 import React from 'react';
 import {Router} from "./components/routing/Router";
-import {Helmet} from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function App() {
-  return (<>
+  return (<HelmetProvider>
     <Helmet>
       <meta property="og:type" content="website" />
       <meta property="og:title" content="¡Tu amigo te ha invitado a zumma!" />
@@ -11,7 +11,7 @@ function App() {
       <meta name="image" property="og:image" content="https://files.slack.com/files-tmb/T03PBQZB144-F060B2GM68M-b0c0bd86d2/preview_480.png" />
     </Helmet>
     <Router />
-  </>);
+  </HelmetProvider>);
 }
 
 export default App;
